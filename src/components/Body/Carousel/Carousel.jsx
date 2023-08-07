@@ -1,3 +1,4 @@
+
 import Arrow from "./Arrow";
 import Card from "./Card/Card";
 import { useState } from "react";
@@ -49,6 +50,7 @@ function previous() {
                             city={item.city}
                         />
                 )}
+
             
             <Arrow direction="M8.25 4.5l7.5 7.5-7.5 7.5"
                 className="inline-flex" onClick={next} />
