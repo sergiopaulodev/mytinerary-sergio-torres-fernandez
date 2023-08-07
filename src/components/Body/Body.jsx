@@ -23,8 +23,9 @@ export default function Body() {
     ]
   return (
     <>
-      <div className="flex lg:mx-20 mx-10 justify-between">
+      <div className="lg:flex lg:mx-20 mx-10 md:flex-nowrap justify-between mb-16">
         <TextContent/>
+        
         <Carousel data={data}  />
       </div>
     </>
