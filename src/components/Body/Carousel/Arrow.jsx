@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 
 export default function Arrow({direction, onClick}) {
@@ -7,7 +8,7 @@ export default function Arrow({direction, onClick}) {
         xmlns="http://www.w3.org/2000/svg" 
         fill="none" viewBox="0 0 24 24" 
         strokeWidth={1.5} stroke="currentColor" 
-        className="hidden sm:flex md:self-center text-gray-500 md:w-1/5 cursor-pointer"
+        className="hidden md:flex md:self-center text-gray-500 md:w-1/5 cursor-pointer"
         onClick={onClick} 
         >
           <path strokeLinecap="round" strokeLinejoin="round" d={direction} />
