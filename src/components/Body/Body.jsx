@@ -23,6 +23,7 @@ export default function Body() {
     ]
   return (
     <>
+
       <div className="lg:flex lg:mx-20 mx-10 md:flex-nowrap justify-between mb-16">
         <TextContent/>
         
