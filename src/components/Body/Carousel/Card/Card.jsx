@@ -1,6 +1,7 @@
 import Location from './Location';
 import ButtonViewMore from './ButtonViewMore';
 
+
 // eslint-disable-next-line react/prop-types
 export default function Card({ src, city, url }) {
   return (
