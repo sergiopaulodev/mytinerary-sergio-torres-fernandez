@@ -1,10 +1,13 @@
 import Header from "../components/Header/Header";
 
-export default function HeaderLayout({children}) {
+import { Outlet } from "react-router-dom";
+
+export default function HeaderLayout() {
   return (
     <>
-        <Header/>
-        {children}
+        <Header />
+        <Outlet />
+
       
     </>
   );
