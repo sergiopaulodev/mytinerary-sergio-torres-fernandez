@@ -1,16 +1,14 @@
 import Location from './Location';
-import ButtonViewMore from './ButtonViewMore';
+// import ButtonViewMore from './ButtonViewMore';
 
 
 // eslint-disable-next-line react/prop-types
-export default function Card({ src, city, url }) {
+export default function Card({ src, city }) {
   return (
     <>
-    {/* <div className='bg-indigo-500 w-80 h-40'>
-        <p>Lorem</p>
-    </div> */}
-      <div className='w-80 h-40 bg-center bg-no-repeat bg-cover  md:w-full flex flex-col justify-between shadow-2xl rounded-md' style={{backgroundImage:`url(${src})`}}>
-            <Location city={city} url={''} />
+      <div className='flex flex-col justify-between w-80 h-40 bg-center bg-no-repeat shadow-2xl bg-cover rounded-md
+      md:w-full' style={{backgroundImage:`url(${src})`}}>
+            <Location city={city} />
             {/* <ButtonViewMore/> */}
 
       </div>
