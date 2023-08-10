@@ -18,7 +18,11 @@ export default function Body() {
 
   return (
     <>
-      <div className="lg:flex lg:justify-center mx-10 md:flex-nowrap justify-between mb-16">
+      <div className="justify-between mx-10 mb-6
+      md:flex-nowrap md:mb-0
+      lg:flex
+      lg:justify-center
+      ">
         <TextContent/>
         
         <Carousel data={data}  />

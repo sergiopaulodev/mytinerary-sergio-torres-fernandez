@@ -1,7 +1,11 @@
 export default function LinkLogin() {
   return (
     <>
-        <button className="bg-[#4F46E5] rounded-lg py-2 px-4 ">
+        <button className="bg-[#4F46E5] rounded-lg py-2 px-4
+        hover:transition
+        hover:ease-in-out
+        hover:bg-[#756ff1]
+        ">
 
             <a href="./" className="flex justify-between items-center gap-4 text-2xl text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
