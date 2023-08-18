@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
+import CityDetails from "./pages/CityDetails";
 
 const router = createBrowserRouter([
     {   
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
         element:<CitiesLayout /> ,
         children: [
             { path:"/cities", element:<Cities />},
+
+        ]
+    },
+    { 
+        path:"/", 
+        element:<MainLayout /> ,
+        children: [
+            { path:"/citydetails", element:<CityDetails />},
 
         ]
     }
