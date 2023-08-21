@@ -1,9 +1,11 @@
+import { Link as Anchor } from 'react-router-dom';
+
 export default function ButtonViewMore() {
   return (
     <>
-        <button className="bg-[#4F46E5]  text-white w-[60%] ml-2 mb-2 rounded-md">
+        <Anchor to="/citydetails" className="bg-[#4F46E5] flex justify-center  text-white w-[60%] ml-2 mb-2 rounded-md">
             <p>View More</p>
-        </button>
+        </Anchor>
     </>
   );
 }
