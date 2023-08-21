@@ -2,6 +2,7 @@ import Carousel from "./Carousel/Carousel";
 import TextContent from "./TextContent/TextContent";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import apiUrl from "../../../apiUrl";
 
 export default function Body() {
 
@@ -9,8 +10,9 @@ export default function Body() {
     useEffect(
         
         () => {
-            axios('/data.json')
-                .then(res => setData(res.data))
+            axios(apiUrl + 'cities/carousel')
+                // // .then(res => console.log(res.data.data))
+                .then(res => setData(res.data.data))
                 .catch(err => console.log(err))
         },
         []

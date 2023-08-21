@@ -1,9 +1,8 @@
-import background from '../../../public/img/background.jpg';
 import Header from '../Header/Header.jsx';
 
 
-export default function Banner() {
-    const src = background
+export default function Banner(src) {
+    // src = background
   return (
     <>
         <div className="bg-center bg-no-repeat bg-cover h-2/5" style={{backgroundImage:`url(${src})`}}>
