@@ -8,7 +8,7 @@ export default function CardCities({ src, city }) {
     // city = 'Buenos Aires'
   return (
     <>
-      <div className='flex flex-col justify-between w-92 h-64 bg-center bg-no-repeat shadow-2xl bg-cover rounded-md
+      <div className='flex flex-col justify-between w-80 h-40 bg-center bg-no-repeat shadow-2xl bg-cover rounded-md
       md:w-full' style={{backgroundImage:`url(${src})`}}>
             <LocationCities city={city} />
             <ButtonViewMore />
