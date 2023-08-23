@@ -24,7 +24,13 @@ export default function Cities() {
     )
 
     function handlerFilter() {
-        console.log(text.current.value)
+        const inputValue = text.current.value
+            .trim()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+        text.current.value = inputValue
+        console.log(inputValue);
         setReEffect(!reEffect)
     }
 
@@ -61,7 +67,7 @@ return (
             :
             <div className="flex flex-col min-h-screen">
                 <p className="text-xl font-semibold">Not found</p>
-                <p className="text-xl font-semibold">has not match, please try again</p>
+                <p className="text-xl font-semibold">Has not match, please try again</p>
             </div>
             }
         
