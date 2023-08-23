@@ -1,51 +1,69 @@
-import { useEffect, useState } from "react";
-import CardCities from "../components/Body/Carousel/Card/CardCities";
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useState, useRef } from "react";
+import CardCity from "../components/Body/Carousel/Card/CardCity";
 import axios from "axios";
 import apiUrl from '../../apiUrl'
 
 export default function Cities() {
 
     const [data, setData] = useState([])
+    const [reEffect, setReEffect] = useState(true)
+    const text =  useRef()
    
     useEffect(
 
         () =>{
-            axios(apiUrl + 'cities')
+            axios(apiUrl + 'cities?city=' + text.current.value)
                 // .then(res => console.log(res.data.response))
                 .then(res => setData(res.data.response))
-                .catch(err => console.log(err))
-            },
-        []
+                .catch(err => {
+                    console.log(err)
+                    setData([])
+                })
+            }, [reEffect]
     )
 
-    
-return (
+    function handlerFilter() {
+        console.log(text.current.value)
+        setReEffect(!reEffect)
+    }
 
-    // <div className="flex flex-col items-center w-full min-h-screen">
-    //     <h1 className="flex justify-center items-start text-6xl text-[#1C1C1C] uppercase" >404 Error</h1>
-    //     <p className="flex justify-center items-start text-3xl text-[#1C1C1C] uppercase">Page not found</p>
-    // </div>
     
+return (   
     
     <>
 
 
-        <label htmlFor="" className="flex justify-center items-center mt-20">
-           <div className="flex justify-start w-1/3 items-center border-2 px-2 rounded-lg">
+        <label htmlFor="" className="flex justify-center items-center mt-20 mb-10">
+           <div className="flex justify-start w-[60%] items-center border-2 px-2 rounded-lg
+           md:w-1/2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-                <input type="text" className="w-1/3 h-[45px] p-4 border-0" placeholder="Search your city" />
+            </svg>
+            <input ref={text} type="text" id="text" onKeyUp={handlerFilter} className="w-full h-[45px] p-4 border-none outline-none hover:outline-none" placeholder="Search your city" />
            </div>
 
         </label>
 
-        <div className="flex flex-wrap">
-        {data.map(each => <CardCities
-                key={each._id}
-                src={each.photo}
-                city={each.city}
-            /> )}    
+        <div className="flex flex-col items-center gap-10 justify-center mb-8
+            md:flex-wrap
+            md:flex-row">
+        { data.length>0 ? 
+            data.map(each => <>
+            <CardCity 
+                src={each.photo} 
+                city={each.city} 
+                country={each.country}
+                id={each._id}
+            />
+            
+            </>)
+            :
+            <div className="flex flex-col min-h-screen">
+                <p className="text-xl font-semibold">Not found</p>
+                <p className="text-xl font-semibold">has not match, please try again</p>
+            </div>
+            }
         
             
         </div>
