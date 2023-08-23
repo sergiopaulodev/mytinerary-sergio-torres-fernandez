@@ -72,11 +72,13 @@ function previousMobile() {
             className="inline-flex" onClick={previous} />
             
                 {data.slice(counterFrom,counterTo).map(
-                item => <Card
-                            key={item.city} 
+                item => <><Card
+                            key={item._id} 
                             src={item.photo} 
                             city={item.city}
+                            id={item._id}
                         />
+                </>
                 )}
             
             <Arrow direction="M8.25 4.5l7.5 7.5-7.5 7.5"

@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
-import CityDetails from "./pages/CityDetails";
+import CityDetails from "./components/Body/Carousel/Card/CityDetails";
 
 const router = createBrowserRouter([
     {   
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         path:"/", 
         element:<MainLayout /> ,
         children: [
-            { path:"/citydetails", element:<CityDetails />},
+            { path:"/citydetails/:id", element:<CityDetails />},
 
         ]
     }
