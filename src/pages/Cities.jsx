@@ -31,7 +31,7 @@ export default function Cities() {
     
 return (   
     
-    <>
+    <div className="bg-gradient-to-t from-indigo-200 flex flex-col">
 
 
         <label htmlFor="" className="flex justify-center items-center mt-20 mb-10">
@@ -67,7 +67,7 @@ return (
         
             
         </div>
-    </>
+    </div>
   )
 
 }

@@ -8,7 +8,8 @@ export default function Footer() {
     <>
         <footer className="flex w-full min-h-[5vh] mx-auto bg-gray-200 gap-8 justify-between mt-0
         lg:min-h-[10vh]">
-            <nav className="flex w-1/3 justify-evenly items-center gap-4">
+            <nav className="hidden w-1/3 justify-between items-center
+                sm:flex">
                     <FooterHome />
                     <FooterCities />
                     <FooterLogin />
@@ -21,7 +22,8 @@ export default function Footer() {
                     </div> */}
             </nav>
             
-            <div className="w-1/3 flex justify-center items-center">
+            <div className="w-full flex justify-center items-center
+                sm:w-1/3">
                 <span className="text-xl font-thin">Sergio Paulo ©</span>
             </div>
         </footer>
