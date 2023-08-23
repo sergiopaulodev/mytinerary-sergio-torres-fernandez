@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
 
-        <div className="min-h-screen flex flex-col justify-evenly bg-gradient-to-t from-indigo-200">
+        <div className="min-h-screen flex flex-col justify-evenly bg-gradient-to-t from-indigo-100">
             <Hero/>
             <Body/>
         </div>
