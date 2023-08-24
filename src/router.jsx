@@ -4,7 +4,8 @@ import Home from './pages/Home'
 import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
-import CityDetails from "./components/Body/Carousel/Card/CityDetails";
+import CityDetailsLayout from "./layouts/CityDetailsLayout";
+import CityDetailsPage from "./pages/CityDetailsPage";
 
 const router = createBrowserRouter([
     {   
@@ -26,9 +27,9 @@ const router = createBrowserRouter([
     },
     { 
         path:"/", 
-        element:<MainLayout /> ,
+        element:<CityDetailsLayout /> ,
         children: [
-            { path:"/citydetails/:id", element:<CityDetails />},
+            { path:"/citydetails/:id", element:<CityDetailsPage />},
 
         ]
     }
