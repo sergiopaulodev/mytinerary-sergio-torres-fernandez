@@ -5,7 +5,7 @@ import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
-import CityDetailsPage from "./pages/CItyDetails";
+import CityDetailsPage from "./pages/CityDetailsPage";
 
 const router = createBrowserRouter([
     {   
