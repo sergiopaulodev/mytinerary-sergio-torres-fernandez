@@ -1,3 +1,5 @@
+//ACTIONS
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import apiUrl from '../../../apiUrl'
@@ -9,7 +11,7 @@ const read_carousel = createAsyncThunk(
             let data = await axios.get(apiUrl + 'cities/carousel')
         console.log(data);
         return {
-            carousel: data.response
+            carousel: 'esto es el carousel de CITIES > ACTIONS'
         }
             
         } catch (error) {

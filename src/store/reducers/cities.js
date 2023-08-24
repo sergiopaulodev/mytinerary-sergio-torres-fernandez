@@ -1,12 +1,14 @@
+// REDUCERS
 import { createReducer } from "@reduxjs/toolkit";
 import city_actions from "../actions/cities";
 const { read_carousel } = city_actions
+
 const initial_state = {
     carousel: []
 }
 
 const city_reducer = createReducer(
-    initial_state, // stado inicial
+    initial_state,
     builder => builder.addCase( // callback costructora de estados globales (agreaga como minimo un caso de reduccion por)
         read_carousel.fulfilled,
         (state,action) => { 
