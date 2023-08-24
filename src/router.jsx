@@ -7,6 +7,7 @@ import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
 import CityDetailsPage from "./pages/CItyDetails";
 
+
 const router = createBrowserRouter([
     {   
         path: "/",
