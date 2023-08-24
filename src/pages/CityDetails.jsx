@@ -6,7 +6,7 @@ import CityDetails from "../components/CityDetails";
 import Header from "../components/Header/Header";
 import Itineraries from "../components/Itineraries";
 
-export default function CItyDetailsV() {
+export default function CityDetailsPage() {
     const { id } = useParams()
 
     const [data, setData] = useState([])
