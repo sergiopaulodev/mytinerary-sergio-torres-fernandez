@@ -24,11 +24,12 @@ export default function CityDetails() {
     <>
     {/* {console.log(data)} */}
       <div className="flex justify-center items-center min-h-screen bg-gradient-to-t from-indigo-300">
-        <div className="flex items-center bg-slate-100 bg-gradient-to-b from-slate-400  w-[75vw] h-[53vh] rounded-3xl shadow-lg">
+        <div className="flex items-center bg-slate-100 bg-gradient-to-b from-slate-400  w-[75vw] h-[60vh] rounded-3xl shadow-lg">
             <div className="flex flex-col items-center justify-center gap-8">
                 <h2 className="text-2xl font-semibold bg-slate-100 rounded-lg p-2">{data.city}</h2>
                 <h3 className="text-2xl font-semibold">{data.country}</h3>
-                <img src={data.photo} alt={data.city} id={data._id} className="w-2/5 rounded-xl shadow-xl" />
+                <img src={data.photo} alt={data.city} id={data._id} 
+                    className="object-cover w-1/2 h-[9rem] rounded-xl shadow-xl" />
                 <p className="text-lg italic text-center w-[70%]">{data.smalldescription}</p>
                 <Anchor to="/cities" className="text-xl font-semibold uppercase bg-slate-100 shadow-xl rounded-lg p-2
                     hover:delay-150 
