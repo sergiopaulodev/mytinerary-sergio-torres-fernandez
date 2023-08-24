@@ -5,7 +5,8 @@ import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
-import CityDetails from "./pages/CityDetails";
+import CityDetailsPage from "./pages/CItyDetails";
+
 
 const router = createBrowserRouter([
     {   
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         path:"/", 
         element:<CityDetailsLayout /> ,
         children: [
-            { path:"/citydetails/:id", element:<CityDetails />},
+            { path:"/citydetails/:id", element:<CityDetailsPage />},
 
         ]
     }
