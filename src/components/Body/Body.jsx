@@ -10,19 +10,19 @@ const { read_carousel } = city_actions
 
 export default function Body() {
     
-    const carousel_redux = useSelector(store => store.cities.carousel)
-    const dispatch = useDispatch()
     // const [data, setData] = useState([])
     // // const store = useSelector(store => store.cities)
     // // console.log(store);
-
+    
     // // const city_reducer = useSelector(store => store)
     // // console.log(city_reducer);
-
+    
     // // const carousel = useSelector(store => store.cities)
     // // console.log(store);
-
+    
     // // const dispatch = useDispatch()
+    const carousel_redux = useSelector(store => store.cities.carousel)
+    const dispatch = useDispatch()
 
     useEffect(
         
