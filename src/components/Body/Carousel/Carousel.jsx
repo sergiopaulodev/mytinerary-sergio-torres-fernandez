@@ -4,7 +4,7 @@ import Card from "./Card/Card";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function Carousel({data}) {
+export default function Carousel( {data} ) {
 
 const [counterFrom, setCounterFrom] = useState(0)
 const [counterTo, setCounterTo] = useState(4)
