@@ -37,7 +37,7 @@ export default function Body() {
             // if (carousel.length === 0){
             // dispatch(read_carousel)
             // }        
-    },[]
+    },[dispatch]
     )
     console.log(carousel_redux);
 

@@ -6,16 +6,17 @@ import CityDetails from "../components/CityDetails";
 import Header from "../components/Header/Header";
 import Itineraries from "../components/Itineraries";
 import { useDispatch, useSelector } from "react-redux";
-import cityDetails_action from "../store/actions/cityDetails";
+import cities_actions from "../store/actions/cities";
 
 export default function CityDetailsPage() {
     // const [data, setData] = useState([])
     
     const { id } = useParams()
-    const cityDetails_redux = useSelector(store => store.cityDetails_reducer.cityDetails)
+    const cityDetails_redux = useSelector(store => store.cities.city)
     const dispatch = useDispatch()
+    console.log(cityDetails_redux);
 
-    const { read_cityDetails } = cityDetails_action
+    const { read_cityDetails } = cities_actions
     
     useEffect(
         () => {
@@ -24,7 +25,7 @@ export default function CityDetailsPage() {
             .then(res => {
                 // setData(res.data.response)
                 console.log(res.data.response);
-                dispatch( read_cityDetails({id: id}) )
+                dispatch( read_cityDetails( {id: id}) )
                 
             })
             .catch(err => console.log(err))

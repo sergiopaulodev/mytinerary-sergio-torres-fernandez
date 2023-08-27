@@ -1,7 +1,7 @@
 import { Link as Anchor} from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
-export default function CityDetails( {city, country, smalldescription}) {
+export default function CityDetails( {city, smalldescription}) {
   
   return (
         <div className="flex self-center w-[60vw] h-[50vh] rounded-3xl bg-slate-50 opacity-70 shadow-lg mb-[7rem]">
