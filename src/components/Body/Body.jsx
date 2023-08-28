@@ -4,9 +4,9 @@ import TextContent from "./TextContent/TextContent";
 import { useEffect } from "react";
 import apiUrl from "../../../apiUrl";
 import axios from "axios";
-import city_actions from "../../store/actions/cities";
+import cities_actions from "../../store/actions/cities";
 
-const { read_carousel } = city_actions
+const { read_carousel } = cities_actions
 
 export default function Body() {
     

@@ -43,27 +43,47 @@ const read_cities = createAsyncThunk(
         }
     }
  )
-
+ 
  const read_cityDetails = createAsyncThunk (
-    'read_cityDetails',
-
+     'read_cityDetails',
+     
+     async ( {id} ) => {
+         try {
+             let data = await axios.get(apiUrl + 'cities/citydetails/' + id)
+             console.log(data.data.response)
+             return{
+                 city: data.data.response,
+                 
+                }
+                
+            } catch (error) {
+                console.log(error);
+                return{
+                    city: []
+                }
+            }
+        }
+        )
+        
+const read_itineraries = createAsyncThunk(
+    'read_itineraries',
     async ( {id} ) => {
         try {
-            let data = await axios.get(apiUrl + 'cities/citydetails/' + id)
-            console.log(data.data.response)
-            return{
-                city: data.data.response,
-                
+            console.log({id});
+            let data = await axios.get(apiUrl + 'itineraries?city=' + id )
+            console.log(data.data.response);
+            return {
+                itineraries: data.data.response
             }
             
         } catch (error) {
             console.log(error);
             return{
-                city: []
+                itineraries: []
             }
         }
     }
-)
+    )
 
-const cities_actions = { read_carousel, read_cities, read_cityDetails }
+const cities_actions = { read_carousel, read_cities, read_cityDetails, read_itineraries }
 export default cities_actions
