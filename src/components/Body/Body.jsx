@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Carousel from "./Carousel/Carousel";
 import TextContent from "./TextContent/TextContent";
 import { useEffect } from "react";
+
 import cities_actions from "../../store/actions/cities";
 
 const { read_carousel } = cities_actions
@@ -14,9 +15,11 @@ export default function Body() {
     useEffect(
         
         () => {
+
             dispatch( read_carousel({carousel: carousel_redux}) )
             // eslint-disable-next-line react-hooks/exhaustive-deps
             }, []
+
     )
     console.log(carousel_redux);
 

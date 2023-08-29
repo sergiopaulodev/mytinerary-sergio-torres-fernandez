@@ -8,7 +8,9 @@ export default function CityDetails( {city, smalldescription}) {
             <div className="flex flex-col items-center justify-center gap-8">
                 <h2 className="text-2xl font-semibold rounded-lg p-2">{city}</h2>
 
+
                 <p className="text-lg italic font-semibold text-center w-[70%]">{smalldescription}</p>
+
 
                 <Anchor to="/cities" className="text-xl font-semibold uppercase bg-slate-100 shadow-xl rounded-lg p-2
                     hover:delay-150 

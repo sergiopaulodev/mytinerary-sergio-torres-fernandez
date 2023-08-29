@@ -8,5 +8,6 @@ import itinerary_reducer from "./reducers/itineraries";
         cities: cities_reducer,
         itineraries: itinerary_reducer,
         //recurso: recurso_reducer
+
     }
  })

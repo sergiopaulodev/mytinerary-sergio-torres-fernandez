@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import { useParams } from "react-router-dom";
 import CityDetails from "../components/CityDetails";
 import Header from "../components/Header/Header";
@@ -20,6 +21,7 @@ export default function CityDetailsPage() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         []
     )        
+
 
         return (
             <>
