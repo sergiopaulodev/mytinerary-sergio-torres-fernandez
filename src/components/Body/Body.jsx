@@ -15,7 +15,6 @@ export default function Body() {
     useEffect(
         
         () => {
-
             dispatch( read_carousel({carousel: carousel_redux}) )
             // eslint-disable-next-line react-hooks/exhaustive-deps
             }, []

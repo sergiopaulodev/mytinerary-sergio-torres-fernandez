@@ -63,4 +63,6 @@ const read_cities = createAsyncThunk(
         )
 
 const cities_actions = { read_carousel, read_cities, read_cityDetails }
+
 export default cities_actions
+
