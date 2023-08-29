@@ -10,6 +10,7 @@ export default function CityDetails( {city, smalldescription}) {
 
                 <p className="text-lg italic font-semibold text-center w-[70%]">{smalldescription}</p>
 
+
                 <Anchor to="/cities" className="text-xl font-semibold uppercase bg-slate-100 shadow-xl rounded-lg p-2
                     hover:delay-150 
                     hover:duration-300 

@@ -9,6 +9,7 @@ const read_carousel = createAsyncThunk(
     async()=>{
         try {
             let data = await axios.get(apiUrl + 'cities/carousel')
+
         return {
             carousel: data.data.data
         }
@@ -62,4 +63,6 @@ const read_cities = createAsyncThunk(
         )
 
 const cities_actions = { read_carousel, read_cities, read_cityDetails }
+
 export default cities_actions
+
