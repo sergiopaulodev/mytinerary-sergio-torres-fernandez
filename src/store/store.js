@@ -1,14 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import city_reducer from "./reducers/cities";
-import allCities_reducer from "./reducers/allCities";
-import cityDetails_reducer from "./reducers/cityDetails";
+import cities_reducer from "./reducers/cities";
+import itinerary_reducer from "./reducers/itineraries";
+
 
  export default configureStore({
     reducer: {
-        cities: city_reducer, 
-                allCities_reducer, 
-                cityDetails_reducer
-        // itineraries:{ itineraries:[]},
-        // users:{ users: []}
+        cities: cities_reducer,
+        itineraries: itinerary_reducer,
+        //recurso: recurso_reducer
+
     }
  })

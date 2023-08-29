@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         path:"/", 
         element:<CityDetailsLayout /> ,
         children: [
-            { path:"/citydetails/:id", element:<CityDetailsPage />},
+            { path:"/:id", element:<CityDetailsPage />},
 
         ]
     }
