@@ -1,22 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef, useState } from "react";
 import CardCity from "../components/Body/Carousel/Card/CardCity";
-import axios from "axios";
-import apiUrl from '../../apiUrl'
 import { useDispatch, useSelector } from "react-redux";
 import cities_actions from "../store/actions/cities";
+import cities_reducer from "../store/reducers/cities";
 
 const { read_cities } = cities_actions
 
 export default function Cities() {
 
-    // const [data, setData] = useState([])
     const [reEffect, setReEffect] = useState(true)
     const text =  useRef()
-
     const cities_redux = useSelector(store => store.cities.cities)
     const dispatch = useDispatch()
-    console.log(cities_redux);
    
     function handlerFilter() {
         setReEffect(!reEffect)
@@ -25,29 +21,16 @@ export default function Cities() {
     useEffect(
 
         () =>{
-            axios.get(apiUrl + 'cities')
-                // // .then(res => console.log(res.data.response))
-                .then(res => {
-                    // setData(res.data.response)
-                    console.log(res.data.response);
-                    dispatch( read_cities({
-                        cities: res.data.response, 
-                        text: text.current.value
-                                .trim()
-                                .normalize("NFD")
-                                .replace(/[\u0300-\u036f]/g, "")
-                                .toLowerCase()
-                            })
-                    )
+            dispatch( read_cities({
+                cities: cities_reducer, 
+                text: text.current.value
+                    .trim()
+                })
+            )
 
-                })
-                .catch(err => {
-                    console.log(err)
-                    // setData([])
-                })
-            }, [dispatch, reEffect]
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+            }, [reEffect]
     )
-    console.log(cities_redux);
 
 
     
@@ -70,22 +53,25 @@ return (
         <div className="flex flex-col items-center gap-10 justify-center mb-8
             md:flex-wrap
             md:flex-row">
-        { cities_redux.length>0 ? 
-            cities_redux.map(each => <>
-            <CardCity 
-                src={each.photo} 
-                city={each.city} 
-                country={each.country}
-                id={each._id}
-            />
+        { cities_redux.length > 0 ? 
+            cities_redux
+            .map(each => 
+            <>
+                <CardCity
+                    key={each._id} 
+                    src={each.photo} 
+                    city={each.city} 
+                    country={each.country}
+                    id={each._id}
+                />
             
-            </>)
-            :
+            </>
+            ) :
             <div className="flex flex-col min-h-screen">
                 <p className="text-xl font-semibold">Not found</p>
                 <p className="text-xl font-semibold">Has not match, please try again</p>
             </div>
-            }
+        }
         
             
         </div>

@@ -1,14 +1,13 @@
 // REDUCERS
 import { createReducer } from "@reduxjs/toolkit";
 import cities_actions from "../actions/cities";
-const { read_carousel, read_cities, read_cityDetails, read_itineraries } = cities_actions
+const { read_carousel, read_cities, read_cityDetails } = cities_actions
 
 
 const initial_state = {
     carousel: [],
     cities: [],
     city: {},
-    itineraries:{}
 }
 
 const cities_reducer = createReducer(
@@ -17,7 +16,7 @@ const cities_reducer = createReducer(
         read_carousel.fulfilled,
         (state,action) => { 
             let new_state = {
-                ...state,       //a la copia del estado tengo que llenarl
+                ...state,
                 carousel: action.payload.carousel
             }
             return new_state
@@ -38,18 +37,7 @@ const cities_reducer = createReducer(
         (state, action) => {
             let new_state = {
                 ...state,
-                // allCities: action.payload.allCities,
                 city: action.payload.city
-            }
-            return new_state
-        }
-    )
-    .addCase(
-        read_itineraries.fulfilled,
-        (state, action) => {
-            let new_state = {
-                ...state,
-                itineraries:action.payload.itineraries
             }
             return new_state
         }
