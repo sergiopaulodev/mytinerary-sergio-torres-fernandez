@@ -12,7 +12,9 @@ const initial_state = {
 
 const cities_reducer = createReducer(
     initial_state,
-    builder => builder.addCase( // callback costructora de estados globales (agreaga como minimo un caso de reduccion por)
+    builder => builder
+    
+    .addCase( // callback costructora de estados globales (agreaga como minimo un caso de reduccion por)
         read_carousel.fulfilled,
         (state,action) => { 
             let new_state = {

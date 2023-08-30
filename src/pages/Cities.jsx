@@ -55,7 +55,7 @@ return (
 
         <div className="flex flex-col items-center gap-10 justify-center mb-8
             md:flex-wrap
-            md:flex-row">
+            md:flex-row" key={'container-cities_redux'}>
         { cities_redux.length > 0 ? 
             cities_redux
             .map(each => 
