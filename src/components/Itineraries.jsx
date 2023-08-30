@@ -34,7 +34,7 @@ export default function Itineraries() {
         <>
         {itineraries_redux.length > 0 ? 
             itineraries_redux.map(each => 
-                <span key={each._id} className="flex flex-col bg-gradient-to-b from-slate-50 justify-center items-center">
+                <span key={each._id} className="flex flex-col bg-gradient-to-b from-slate-50 justify-center items-center min-h-screen">
                     <div className="flex flex-col bg-white gap-4">
                         <div className="flex justify-center text-[#1C1C1C]">{each.name}</div>
                         <div className="flex flex-col items-center justify-between gap-4 w-[50vw] h-[80%]">

@@ -25,7 +25,7 @@ export default function CityDetailsPage() {
 
         return (
             <>
-                <div className="flex flex-col bg-no-repeat bg-center justify-between"  style={{backgroundImage: `url(${cityDetails_redux.photo})`}}>
+                <div className="flex flex-col bg-no-repeat bg-center justify-between min-h-screen"  style={{backgroundImage: `url(${cityDetails_redux.photo})`}}>
                     <Header/>
                     <CityDetails city={cityDetails_redux.city} country={cityDetails_redux.country} smalldescription={cityDetails_redux.smalldescription}/>
                     <div className="flex justify-center">
