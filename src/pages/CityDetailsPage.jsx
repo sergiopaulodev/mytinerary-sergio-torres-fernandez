@@ -25,13 +25,9 @@ export default function CityDetailsPage() {
 
         return (
             <>
-                <div className="flex flex-col bg-no-repeat bg-center justify-between min-h-screen"  style={{backgroundImage: `url(${cityDetails_redux.photo})`}}>
+                <div className="flex flex-col bg-no-repeat justify-between min-h-screen"  style={{backgroundImage: `url(${cityDetails_redux.photo})`}}>
                     <Header/>
                     <CityDetails city={cityDetails_redux.city} country={cityDetails_redux.country} smalldescription={cityDetails_redux.smalldescription}/>
-                    <div className="flex justify-center">
-                        <h2 className="text-4xl font-semibold uppercase bg-white rounded-t-lg p-2" id="itineraries">Itineraries</h2>
-                    </div>
-                    
                     <Itineraries/>
                 </div>
             </>
