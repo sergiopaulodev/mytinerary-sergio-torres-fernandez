@@ -6,7 +6,7 @@ import FooterLogin from "./FooterLogin";
 export default function Footer() {
   return (
     <>
-        <footer className="flex w-full min-h-[5vh] mx-auto bg-gray-200 gap-8 justify-between mt-0
+        <footer className="flex w-full min-h-[5vh] px-4 bg-gray-200 gap-8 justify-between mt-0
         lg:min-h-[10vh]">
             <nav className="hidden w-1/3 justify-between items-center
                 sm:flex">
