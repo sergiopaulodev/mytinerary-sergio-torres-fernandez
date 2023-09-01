@@ -14,7 +14,7 @@ export default function Itineraries( {show}) {
     const dispatch = useDispatch()
 
     
-    // console.log(itineraries_redux.map(each=>console.log(each.city_id.admin_id.photo)))
+    console.log(itineraries_redux.map(each=>console.log(each.city_id.admin_id.name)))
 
     useEffect(
         () =>{
@@ -28,7 +28,7 @@ export default function Itineraries( {show}) {
 
     
     
-        console.log(itineraries_redux);
+    console.log(itineraries_redux);
     return (
         <div className="flex flex-col gap-8 bg-gray-100">
             
@@ -38,7 +38,9 @@ export default function Itineraries( {show}) {
                     <div className="flex flex-col bg-gray-100 shadow-md rounded-lg gap-4">
                         <div className="flex justify-center text-2xl text-[#1C1C1C]">{each.name}</div>
                         <div className="flex flex-col items-center justify-between gap-8 w-[50vw] h-[80%]">
-                            <img src={each.photo} alt={each.name} className="max-w-[40vw] h-auto rounded-md shadow-sm" />
+                            <div className="flex justify-center">
+                                <img src={each.photo} alt={each.name} className="w-[40vw] objet-cover rounded-md shadow-sm" />
+                            </div>
                             <UsersInteractions photo={each.city_id.admin_id.photo} userName={each.city_id.admin_id.name} tags={each.tags} duration={each.duration} price={each.price}  />
                             
                         </div>

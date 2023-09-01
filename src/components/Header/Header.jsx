@@ -1,17 +1,16 @@
 import HamMenu from "./HamMenu/HamMenu";
-import Logo from "./Logo";
 import NavBar from "./NavBar/NavBar";
-import logo from '../../../public/MTlogo.png'
 
 export default function Header() {
   return (
     <>
+    
       
-        <div className="flex justify-between mx-10 mb-5
+        <div className="flex justify-end bg-gradient-to-l from-slate-400 p-2
         md:items-center 
-        lg:mx-10">
+        ">
 
-            <Logo src={logo} name={"My Tinerary"} />
+            {/* <Logo src={logo} /> */}
 
             <HamMenu />
             <NavBar />
