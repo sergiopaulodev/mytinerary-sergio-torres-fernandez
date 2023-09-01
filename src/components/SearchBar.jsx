@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
-export default function SearchBar({text}) {
+export default function SearchBar() {
 
     const [reEffect, setReEffect] = useState(true)
+    const text = useRef()
 
     function handlerFilter() {
         setReEffect(!reEffect)

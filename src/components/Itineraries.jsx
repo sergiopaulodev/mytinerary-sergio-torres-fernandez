@@ -14,7 +14,7 @@ export default function Itineraries( {show}) {
     const dispatch = useDispatch()
 
     
-    console.log(itineraries_redux.map(each=>console.log(each.city_id.admin_id.name)))
+    console.log(itineraries_redux.map(each=>console.log(each.comments)))
 
     useEffect(
         () =>{
@@ -41,8 +41,11 @@ export default function Itineraries( {show}) {
                             <div className="flex justify-center">
                                 <img src={each.photo} alt={each.name} className="w-[40vw] objet-cover rounded-md shadow-sm" />
                             </div>
-                            <UsersInteractions photo={each.city_id.admin_id.photo} userName={each.city_id.admin_id.name} tags={each.tags} duration={each.duration} price={each.price}  />
-                            
+                            <UsersInteractions photo={each.city_id.admin_id.photo} userName={each.city_id.admin_id.name} tags={each.tags} duration={each.duration} price={each.price} />
+                            <div className="flex flex-col items-center">
+                                <h2 className="text-center text-lg font-thin">⛔ Comments Under Construction ⛔</h2>
+                                <p className="font-thin">{each.comments}</p>
+                            </div>                            
                         </div>
                             
                     </div>
