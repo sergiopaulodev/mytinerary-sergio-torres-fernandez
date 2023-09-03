@@ -11,7 +11,6 @@ export default function CityDetails( {city, smalldescription, photo}) {
             md:mx-0
             md:w-1/2
             ">
-
                 <div className="flex flex-col items-center justify-start gap-8">
                     <div className='flex justify-between w-[70%]'>
                     <h2 className="text-2xl font-semibold rounded-lg p-2">{city}</h2>
@@ -25,6 +24,11 @@ export default function CityDetails( {city, smalldescription, photo}) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
                         </svg>
+
+                    </Anchor>
+                    </div>
+                    <p className="text-lg italic font-semibold text-center w-[70%]">{smalldescription}</p>
+
 
                     </Anchor>
                     </div>
