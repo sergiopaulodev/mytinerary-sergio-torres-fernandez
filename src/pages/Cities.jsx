@@ -39,7 +39,7 @@ export default function Cities() {
     
 return (   
     
-    <div className="bg-gradient-to-t from-indigo-200 flex flex-col">
+    <div className="bg-gradient-to-t from-indigo-200 flex flex-col w-[100%]">
 
         {/* Search Barz  */}
         <label htmlFor="" className="flex justify-center items-center mt-20 mb-10">

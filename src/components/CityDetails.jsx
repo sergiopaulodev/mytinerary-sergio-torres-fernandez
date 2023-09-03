@@ -4,9 +4,13 @@ import { Link as Anchor} from 'react-router-dom'
 export default function CityDetails( {city, smalldescription, photo}) {
   
   return (
-    <div className="flex flex-col justify-center bg-no-repeat bg-fixed bg-cover min-w-screen min-h-screen"  style={{backgroundImage: `url(${photo})`}}>
+    <div className="flex flex-col justify-center bg-no-repeat bg-fixed bg-cover min-w-screen min-h-screen w-[100%]"  style={{backgroundImage: `url(${photo})`}}>
         <div className='flex justify-center'>
-            <div className="flex w-1/2 rounded-3xl bg-slate-50 opacity-80 shadow-lg p-8">
+            <div className="flex rounded-3xl bg-slate-50 opacity-80 shadow-lg p-2 pb-4 mx-2
+            md:p-8
+            md:mx-0
+            md:w-1/2
+            ">
                 <div className="flex flex-col items-center justify-start gap-8">
                     <div className='flex justify-between w-[70%]'>
                     <h2 className="text-2xl font-semibold rounded-lg p-2">{city}</h2>
