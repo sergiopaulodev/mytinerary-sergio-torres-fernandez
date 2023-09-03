@@ -16,7 +16,7 @@ export default function UsersInteractions( {photo ,userName, tags, duration, pri
 
     return (
     <>
-        { show ?
+        { !show ?
     //DropDown hidden
         <div className="flex justify-between mb-4 w-[90vw]
             md:w-[70vw]
