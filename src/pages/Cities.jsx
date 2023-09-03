@@ -41,6 +41,7 @@ return (
     
     <div className="bg-gradient-to-t from-indigo-200 flex flex-col w-[100%]">
 
+
         {/* Search Barz  */}
         <label htmlFor="" className="flex justify-center items-center mt-20 mb-10">
            <div className="flex justify-start w-[60%] items-center border-2 px-2 rounded-lg

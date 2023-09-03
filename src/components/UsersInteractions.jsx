@@ -6,6 +6,7 @@ import Comments from "./Comments";
 
 // eslint-disable-next-line react/prop-types
 export default function UsersInteractions( {photo ,userName, tags, duration, price, comments} ) {
+
     // {photo ,userName, tags, duration, price}
     const [show, setShow] = useState(false)
     
@@ -22,6 +23,7 @@ export default function UsersInteractions( {photo ,userName, tags, duration, pri
             md:w-[70vw]
             lg:w-[40vw]
             ">
+
             <Like />
             <button onClick={handlerShowHide}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
@@ -35,6 +37,7 @@ export default function UsersInteractions( {photo ,userName, tags, duration, pri
         md:w-[70vw]
         lg:w-[40vw]
         ">
+
             <Like />
             <button onClick={handlerShowHide}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
@@ -50,6 +53,7 @@ export default function UsersInteractions( {photo ,userName, tags, duration, pri
         
         <Activities />
         <Comments comments={comments}/>
+
 
         </>
 

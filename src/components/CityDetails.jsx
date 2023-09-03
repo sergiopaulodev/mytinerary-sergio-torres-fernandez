@@ -11,6 +11,7 @@ export default function CityDetails( {city, smalldescription, photo}) {
             md:mx-0
             md:w-1/2
             ">
+
                 <div className="flex flex-col items-center justify-start gap-8">
                     <div className='flex justify-between w-[70%]'>
                     <h2 className="text-2xl font-semibold rounded-lg p-2">{city}</h2>
