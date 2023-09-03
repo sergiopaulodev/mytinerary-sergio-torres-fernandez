@@ -26,6 +26,7 @@ export default function CityDetailsPage() {
         return (
             <>
                 <div className="min-h-screen w-[100%]">
+
                     <Header/>
                     <CityDetails city={cityDetails_redux.city} country={cityDetails_redux.country} smalldescription={cityDetails_redux.smalldescription} photo={cityDetails_redux.photo}/>
                     <Itineraries/>

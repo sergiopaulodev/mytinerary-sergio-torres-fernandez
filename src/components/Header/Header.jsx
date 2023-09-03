@@ -7,6 +7,7 @@ export default function Header() {
     
       
         <div className="flex w-[100%] justify-end bg-gradient-to-l from-gray-400 p-2
+
         md:items-center 
         ">
 
