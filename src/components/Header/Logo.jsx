@@ -12,6 +12,7 @@ export default function Logo({ src }) {
                 <img src={src} alt="" className="p-2 transition-transform transform duration-300 ease-in-out rounded-3xl w-[12rem]
                 hover:scale-110
                 hover:" />
+
                 
         
         </Anchor>    

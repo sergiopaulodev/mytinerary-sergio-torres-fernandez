@@ -12,6 +12,7 @@ export default function InfoToUser({ photo ,userName, tags, duration, price }) {
         ">
             <div className="flex flex-col gap-2 
                 md:items-center">
+
                 <p className="text-center text-[#1C1C1C]">User</p>
                 <img src={photo} alt={userName} className="w-[80px] h-[80px] object-cover rounded-full 
                     hover:border-2 
@@ -20,6 +21,7 @@ export default function InfoToUser({ photo ,userName, tags, duration, price }) {
             </div>
             <div className="flex flex-col justify-between items-start
                 md:items-center">
+
                 <p className="text-center text-[#1C1C1C]">Hashtags</p>
                 <p className="text-slate-400">{tags}</p> 
             </div>
@@ -30,6 +32,7 @@ export default function InfoToUser({ photo ,userName, tags, duration, price }) {
             <div className="flex flex-col justify-between items-start
                 md:items-center
                 ">
+
                 <p className="text-center text-[#1C1C1C]">Price</p>
                 
 
