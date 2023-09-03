@@ -30,11 +30,6 @@ export default function CityDetails( {city, smalldescription, photo}) {
                     <p className="text-lg italic font-semibold text-center w-[70%]">{smalldescription}</p>
 
 
-                    </Anchor>
-                    </div>
-                    <p className="text-lg italic font-semibold text-center w-[70%]">{smalldescription}</p>
-
-
 
                 </div>
             </div>

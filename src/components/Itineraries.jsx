@@ -31,7 +31,10 @@ export default function Itineraries( {show}) {
     console.log(itineraries_redux);
     return (
         <div className="flex flex-col gap-8 bg-gray-300 w-[100%]">
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
             
         {itineraries_redux.length > 0 ? 
             itineraries_redux.map(each => 
@@ -56,7 +59,10 @@ export default function Itineraries( {show}) {
                         <UsersInteractions comments={each.comments} photo={each.city_id.admin_id.photo} userName={each.city_id.admin_id.name} tags={each.tags} duration={each.duration} price={each.price} />
                         {/* Comments */}
                                                         
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
                         </div>
                             
                     </div>
