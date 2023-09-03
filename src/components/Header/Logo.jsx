@@ -9,7 +9,10 @@ export default function Logo({ src }) {
     <>
         <Anchor to={'/'} className="flex w-3/4">
     
-                <img src={src} alt="" className="p-2  rounded-3xl w-[12rem]" />
+                <img src={src} alt="" className="p-2 transition-transform transform duration-300 ease-in-out rounded-3xl w-[12rem]
+                hover:scale-110
+                hover:" />
+
                 
         
         </Anchor>    
