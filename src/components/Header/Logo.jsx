@@ -2,12 +2,12 @@ import { Link as Anchor } from 'react-router-dom';
 
 
 // eslint-disable-next-line react/prop-types
-export default function Logo({ src }) {
+export default function Logo({ src, style }) {
   
 
     return (
     <>
-        <Anchor to={'/'} className="flex w-3/4">
+        <Anchor to={'/'} className={style}>
     
                 <img src={src} alt="" className="p-2 transition-transform transform duration-300 ease-in-out rounded-3xl w-[12rem]
                 hover:scale-110

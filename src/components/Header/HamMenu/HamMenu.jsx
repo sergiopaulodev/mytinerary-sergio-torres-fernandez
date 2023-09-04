@@ -20,12 +20,10 @@ export default function HamMenu( ) {
     <>
         
         {isChecked ?
-        <div className="hidden">
-            <Logo src={logo}/>
-        </div>
+        <Logo src={logo} style={"hidden w-full md:flex md:justify-star"}/>
         
         :
-        <Logo src={logo}/>
+        <Logo src={logo} style={"flex w-full"}/>
         }
         
 
