@@ -7,7 +7,7 @@ export default function NavBar() {
   
     return (
         <>
-            <nav className="justify-between hidden mx-10
+            <nav className="justify-between hidden p-4
             md:flex 
             md:gap-6 
             md:items-center">
