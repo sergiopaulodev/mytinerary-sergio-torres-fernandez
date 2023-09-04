@@ -6,6 +6,9 @@ import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
 import CityDetailsPage from "./pages/CityDetailsPage";
+import FormSignUp2 from './pages/FormSignUp2'
+import FormSignUp1 from './pages/FormSignUp1'
+import FormSignIn from './pages/FormSignIn'
 
 const router = createBrowserRouter([
     {   
@@ -15,6 +18,9 @@ const router = createBrowserRouter([
             { path:"/", element:<Home />},
             { path:"/index", element:<Home />},
             { path:"/home", element:<Home />},
+            { path:"/auth/register_step1", element:<FormSignUp1/>},
+            { path:"/auth/register_step2", element:<FormSignUp2/>},
+            { path:"/auth/signin", element:<FormSignIn/>}
         ]
     },
     { 
