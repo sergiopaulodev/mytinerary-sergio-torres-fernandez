@@ -41,10 +41,10 @@ export default function Form() {
                 value="Sign in"
                 onClick={handleSignIn}
             />
-        <p>
+        <p className="w-4/5 flex justify-between">
             Do not you have an account?
             <Anchor
-            className="text-xl font-bold text-[#5c3481] cursor-pointer"
+            className="text-lg font-bold text-[#5c3481] cursor-pointer"
             to='/auth/register_step2'
             >
             Sign up

@@ -11,7 +11,7 @@ export default function Form2() {
   const mail = useRef("");
   const password = useRef("");
 
-  const countries = ['Argentina', 'Chile','Brasil','Uruguay','Bolivia','Venezuela','Germany','Spain', 'England', 'Norway']
+  const countries = ['Argentina', 'Chile','Brazil','Uruguay','Bolivia','Venezuela','Germany','Spain', 'England', 'Norway']
   
   async function handleSignUp() {
     try {
@@ -70,13 +70,14 @@ export default function Form2() {
                     /> */}
                     <select name="countries" id="countries" className="w-4/5 py-4 border-b-2">
                         {countries.length > 0 ?
-                        countries.map(country => {
-                            <option key={country} value={country}>{console.log(country)}</option>
-
-                        })
+                        // eslint-disable-next-line react/jsx-key
+                        countries.map(country => <option value={country}>{country}</option>)
                         :
                         null
                         }
+                        {/* <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Francia">Francia</option> */}
                     </select>
                     <input
                         ref={photo}

@@ -22,7 +22,7 @@ export default function Form1() {
         password: password.current.value,
       };
       await axios( //en step1 deberia loggearme al poner mis datos, elegir bien cual es la peticion de axios
-        apiUrl + "auth/", //url del endpoind read_one
+        apiUrl + "auth/", //url del endpoind read_one 
         data //objeto con los datos para crear
       );
       console.log(data);
@@ -36,7 +36,7 @@ export default function Form1() {
             <h2 className="text-xl font-semibold pb-4
                 md:text-2xl">
                 Log in to your account</h2>
-            <div className="flex w-full justify-start gap-4
+            <div className="flex w-full justify-start gap-16
             md:w-4/5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <g clipPath="url(#clip0_0_292)">
@@ -65,6 +65,15 @@ export default function Form1() {
             </div>
             
             <p className="text-center text-2xl font-thin w-4/5">o</p>
+            <p className="w-4/5 flex justify-between">
+                    Already have an account?
+                    <Anchor
+                    className="text-lg font-bold text-[#5c3481] cursor-pointer"
+                    to='/auth/signin'
+                    >
+                    Sign in
+                    </Anchor>
+            </p>
             
             <input
                 ref={mail}
