@@ -2,6 +2,8 @@ import HamMenu from "./HamMenu/HamMenu";
 import NavBar from "./NavBar/NavBar";
 
 export default function Header() {
+    
+
   return (
     <>
     
@@ -15,6 +17,7 @@ export default function Header() {
 
             <HamMenu />
             <NavBar />
+            
         </div>
     
     </>

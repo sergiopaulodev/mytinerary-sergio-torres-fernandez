@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import axios from "axios";
-import apiUrl from "../../apiUrl";
+import { useDispatch } from "react-redux";
 import { Link as Anchor } from "react-router-dom";
+import user_actions from "../store/actions/users";
+const { signup } = user_actions
 
 export default function Form2() {
   const name = useRef("");
@@ -10,11 +11,13 @@ export default function Form2() {
   const photo = useRef("");
   const mail = useRef("");
   const password = useRef("");
+  const dispatch = useDispatch()
 
   const countries = ['Argentina', 'Chile','Brazil','Uruguay','Bolivia','Venezuela','Germany','Spain', 'England', 'Norway']
   
   async function handleSignUp() {
     try {
+        
       let data = {
         name: name.current.value,
         lastName: lastName.current.value,
@@ -23,11 +26,8 @@ export default function Form2() {
         mail: mail.current.value,
         password: password.current.value,
       };
-      await axios.post(
-        apiUrl + "auth/register", //url del endpoind de creacion, CORREGIR
-        data //objeto con los datos para crear
-      );
-      console.log(data);
+      dispatch(signup({data}))
+ 
     } catch (error) {
       console.log(error);
     }
@@ -59,25 +59,15 @@ export default function Form2() {
                     />
                 </div>
                 <div className="flex gap-8 w-4/5">
-                    {/* <input
-                        ref={country}
-                        type="select"
-                        className="w-4/5 py-4 border-b-2"
-                        name="country"
-                        id="country"
-                        defaultValue=""
-                        placeholder="country"
-                    /> */}
-                    <select name="countries" id="countries" className="w-4/5 py-4 border-b-2">
+                    
+                    <select name="countries" id="countries" className="w-4/5 py-4 border-b-2" ref={country}>
                         {countries.length > 0 ?
                         // eslint-disable-next-line react/jsx-key
-                        countries.map(country => <option value={country}>{country}</option>)
+                        countries.map(country => <option key={country} value={country}>{country}</option>)
                         :
                         null
                         }
-                        {/* <option value="Argentina">Argentina</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Francia">Francia</option> */}
+                        
                     </select>
                     <input
                         ref={photo}
@@ -117,7 +107,7 @@ export default function Form2() {
                     Already have an account?
                     <Anchor
                     className="text-lg font-bold text-[#5c3481] cursor-pointer"
-                    to='/auth/signin'
+                    to='/auth/login'
                     >
                     Sign in
                     </Anchor>
