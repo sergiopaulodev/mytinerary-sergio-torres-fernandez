@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import itinerary_action from "../store/actions/itineraries";
+import itinerary_action from "../../store/actions/itineraries";
 import NoneIntineraries from "./NoneIntineraries";
 import UsersInteractions from "./UsersInteractions";
 const { read_itineraries_from_city } = itinerary_action

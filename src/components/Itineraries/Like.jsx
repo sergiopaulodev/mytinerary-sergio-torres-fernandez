@@ -1,7 +1,7 @@
 import { useState } from "react";
 export default function Like() {
 
-    const [like,setLike] = useState(false)
+    const [like, setLike] = useState(false)
 
     function handlerLike() {
         setLike(!like)

@@ -69,6 +69,7 @@ const signout = createAsyncThunk(
         try {
             let token = localStorage.getItem('token')
             let authorization = { headers:{ 'Authorization':`Bearer ${token}` } }
+            // eslint-disable-next-line no-unused-vars
             let data = await axios.post(apiUrl+'auth/logout',null,authorization)
             localStorage.removeItem('token')
             return {

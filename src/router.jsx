@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 // import HeaderLayout from './layouts/HeaderLayout'
-import Home from './pages/Home'
+import Home from './pages/Home';
 import Cities from "./pages/Cities";
 import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
 import CityDetailsPage from "./pages/CityDetailsPage";
-import FormCreateAccount from './components/FormCreateAccount'
-import FormSignUp from './pages/FormSignUp'
-import FormSignIn from './pages/FormSignIn'
-import LogOut from "./pages/LogOut";
+import FormCreateAccount from './components/FormCreateAccount';
+import FormSignUp from './pages/FormSignUp';
+import FormSignIn from './pages/FormSignIn';
+import LogOut from "./components/LogOut";
 
 const router = createBrowserRouter([
     {   
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
             { path:"/", element:<Home />},
             { path:"/index", element:<Home />},
             { path:"/home", element:<Home />},
-            { path:"/auth/account", element:<FormSignUp/>}, // revisar rutas para el register
+            { path:"/auth", element:<FormSignUp/>}, // revisar rutas para el register
             { path:"/auth/register", element:<FormCreateAccount/>},
             { path:"/auth/login", element:<FormSignIn/>},
             { path:"/auth/logout", element:<LogOut/>}

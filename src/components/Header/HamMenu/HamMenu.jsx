@@ -2,18 +2,33 @@ import LinkHome from "../NavBar/LinkHome";
 import LinkCities from "../NavBar/LinkCities";
 import LinkLogin from "../NavBar/LinkLogin";
 import logo from '../../../../public/mytinerary-logo.png'
+import UserLogged from '../NavBar/UserLogged';
+import user_actions from "../../../store/actions/users";
+const { signout } = user_actions
 
 
 import { useState } from "react";
 import Logo from "../Logo";
+import { useDispatch, useSelector } from "react-redux";
+import LinkLogOut from "../NavBar/LinkLogOut";
 
 export default function HamMenu( ) {
   
+
     const [isChecked, setChecked] = useState(false)
 
     function hMenu(){
         setChecked(!isChecked)
     }
+
+    function signOut() {
+        dispatch(signout())
+    }
+
+    const dispatch = useDispatch()
+    const user = useSelector(store=>store.users.user)
+    const mail_signin =useSelector(store=>store.users.user?.mail)
+
 
 
     return (
@@ -35,15 +50,23 @@ export default function HamMenu( ) {
                   ><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
   
-              {isChecked ?
+              {isChecked &&
 
                 <div className="flex flex-col justify-between gap-6 mt-8 items-end">
+                    <UserLogged name={user.name} photo={user.photo} />
                     <LinkHome />
                     <LinkCities/>
-                    <LinkLogin/>
+                    {mail_signin?
+                    <>
+                    <LinkLogOut onClick={signOut} />
+                    </>
+                    
+                    :
+                    <LinkLogin style={'bg-[#4F46E5] rounded-lg py-2 px-4 hover:transition hover:ease-in-out hover:bg-[#756ff1]'}/>
+                    }
+                    
                 </div>
 
-              : (null)
               }
                   
           </div>

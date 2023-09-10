@@ -34,16 +34,22 @@ export default function Form1() {
 
   return (
 
-    <div className="w-full flex justify-center bg-gradient-to-r from-green-400 to-blue-500 py-8">
-        <div className="flex justify-center items-center min-h-screen bg-white w-[40%] rounded-xl shadow-md">
+    <div className="w-full px-4 flex justify-center bg-gradient-to-r from-gray-400 to-[#5c3481] py-8">
+        <div className="flex flex-col justify-center w-full items-center min-h-screen bg-white rounded-xl shadow-md
+            sm:w-[80%]
+            md:w-[50%]
+            ">
             {mail?
             <>
-                <form className="flex flex-col w-1/2 items-start gap-4">
+                <form className="flex flex-col w-full items-center gap-4
+                    sm:w-[90%]
+                    md:w-[75%]
+                    ">
                 <h2 className="text-xl font-semibold pb-4
                     md:text-2xl">
                     Log in to your account</h2>
-                <div className="flex w-full justify-start gap-16
-                md:w-4/5">
+                <div className="flex w-full justify-evenly gap-16
+                    md:w-4/5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <g clipPath="url(#clip0_0_292)">
                             <path d="M31.688 16.3686C31.688 15.2809 31.5998 14.1874 31.4117 13.1174H16.32V19.2787H24.9623C24.6037 21.2659 23.4514 23.0237 21.7641 24.1408V28.1386H26.9201C29.9478 25.3519 31.688 21.2365 31.688 16.3686Z" fill="#4285F4"/>
@@ -75,7 +81,7 @@ export default function Form1() {
                 <input
                     ref={mail_signin}
                     type="text"
-                    className="w-4/5 py-4 text border-b-2 cursor-not-allowed bg-gray-300 opacity-50-"
+                    className="w-4/5 py-4 border-b-2 cursor-not-allowed bg-gray-300 opacity-50"
                     name="mail"
                     id="mail"
                     defaultValue=""
@@ -84,7 +90,7 @@ export default function Form1() {
                 <input
                     ref={password_signin}
                     type="password"
-                    className="w-4/5 py-4 text border-b-2 cursor-not-allowed bg-gray-300 opacity-50-"
+                    className="w-4/5 py-4 border-b-2 cursor-not-allowed bg-gray-300 opacity-50"
                     name="password"
                     id="password"
                     defaultValue=""
@@ -92,35 +98,22 @@ export default function Form1() {
                 />
                 <input
                     type="button"
-                    className="bg-[#5c3481] text-white w-4/5 py-4 font-semibold text-center rounded-md mt-12 mb-4 cursor-not-allowed"
+                    className="text-white w-4/5 py-4 font-semibold text-center rounded-md mt-12 mb-4 cursor-not-allowed"
                     value="Continue"
                     onClick={handleSignIn}
                 />
-                <div className="flex flex-col w-full gap-2 pt-2
-                md:w-4/5">
-                    <p className="w-4/5 flex font-semibold">Sign up with email</p>
-                    <p className="w-full
-                        md:flex
-                        md:justify-between
-                        ">
-                        Do you not have an account?</p>
-                    <Anchor
-                        className="text-lg flex justify-end font-bold text-[#5c3481] cursor-pointer"
-                        to='/auth/register'
-                        >
-                        Sign up
-                    </Anchor>
-
-                    
-                </div>
             </form>
             </>:
             <>
-                <form className="flex flex-col w-1/2 items-start gap-4">
-                    <h2 className="text-xl font-semibold pb-4
-                        md:text-2xl">
+                <form className="flex flex-col w-full items-center gap-4
+                    sm:w-[90%]
+                    md:w-[75%]
+                    ">
+                    <h2 className="text-xl font-semibold pb-8
+                        md:text-2xl
+                        ">
                         Log in to your account</h2>
-                    <div className="flex w-full justify-start gap-16
+                    <div className="flex w-full justify-evenly gap-16
                     md:w-4/5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <g clipPath="url(#clip0_0_292)">
@@ -153,7 +146,7 @@ export default function Form1() {
                     <input
                         ref={mail_signin}
                         type="text"
-                        className="w-4/5 py-4 text border-b-2"
+                        className="w-4/5 py-4 border-b-2"
                         name="mail"
                         id="mail"
                         defaultValue=""
@@ -162,7 +155,7 @@ export default function Form1() {
                     <input
                         ref={password_signin}
                         type="password"
-                        className="w-4/5 py-4 text border-b-2"
+                        className="w-4/5 py-4 border-b-2"
                         name="password"
                         id="password"
                         defaultValue=""
@@ -174,27 +167,26 @@ export default function Form1() {
                         value="Continue"
                         onClick={handleSignIn}
                     />
-                    <div className="flex flex-col w-full gap-2 pt-2
-                    md:w-4/5">
-                        <p className="w-4/5 flex font-semibold">Sign up with email</p>
-                        <p className="w-full
-                            md:flex
-                            md:justify-between
-                            ">
+                </form>
+            </>
+            }
+            <div className="flex flex-col items-center w-4/5 gap-2 px-4
+                sm:w-[90%]
+                md:w-[85%]
+                ">
+                    
+                    <p className="font-semibold">Sign up with email</p>
+                    <div className="flex flex-wrap gap-2 items-end">
+                        <p className="">
                             Do you not have an account?</p>
                         <Anchor
-                            className="text-lg flex justify-end font-bold text-[#5c3481] cursor-pointer"
+                            className="text-lg font-bold text-[#5c3481] cursor-pointer"
                             to='/auth/register'
                             >
                             Sign up
                         </Anchor>
-
-                        
                     </div>
-                </form>
-            </>
-
-            }
+            </div>
             
         </div>
     </div>
