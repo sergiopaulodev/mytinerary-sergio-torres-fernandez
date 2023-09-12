@@ -16,9 +16,6 @@ export default function NavBar() {
     const user = useSelector(store=>store.users.user)
 
    
-    
-console.log(user);
-
 function signOut() {
     dispatch(signout())
 }

@@ -20,7 +20,8 @@ export default function Form() {
       password: password_signin.current.value,
     };
     
-    disaptch(signin({data}))
+    let responseDispatch = disaptch(signin({data}))
+    console.log(responseDispatch);
 
 
     // // await axios.post(

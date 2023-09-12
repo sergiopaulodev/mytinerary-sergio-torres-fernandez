@@ -21,7 +21,8 @@ export default function Form1() {
       mail: mail_signin.current.value,
       password: password_signin.current.value,
     };
-    disaptch(signin({data}))
+    let responseDispatch = disaptch(signin({data}))
+    console.log(responseDispatch);
     
     // // await axios.post(
     // //     apiUrl + "auth/login", data //objeto con los datos para crear
@@ -29,7 +30,6 @@ export default function Form1() {
     // // console.log(data);
   }
   const mail = useSelector(store =>store.users.user?.mail)
-  console.log(mail);
   
 
   return (
