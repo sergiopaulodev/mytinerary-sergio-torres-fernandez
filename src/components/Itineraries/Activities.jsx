@@ -1,46 +1,44 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import activities_action from "../../store/actions/activities";
+const { read_activities_from_itinerary } = activities_action
 
-export default function Activities() {
-// const activity1 = false
-// const activity2 = false
-// const activity3 = false
+
+// eslint-disable-next-line react/prop-types
+export default function Activities({itinerary_id}) {
+
+    
+    const activities = useSelector(store=>store.activities.activities)
+    console.log(activities);
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch ( read_activities_from_itinerary ({itinerary_id}) )
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        },[]
+    )
 
 
   return (
-    // <div className="flex justify-between items-center w-[40vw]">
-    //     <div className="flex">
-    //         <h1></h1>
-    //         {activity1 ?
-    //         <div className="flex flex-col items-center">
-    //             <img src="https://cdn.onlinewebfonts.com/svg/img_227011.png" alt="" className="object-cover w-[100px] h-[100px]"/>
-    //             <p>Activity</p>
-    //         </div>
-    //         :
-    //         <p className=''>🚧 Under Construction 🚧</p>
-    //         }
-    //     </div>
-    //     <div className="flex">
-    //         {activity2 ?
-    //         <div className="flex flex-col items-center">
-    //             <img src="https://cdn.onlinewebfonts.com/svg/img_227011.png" alt="" className="object-cover w-[100px] h-[100px]"/>
-    //             <p>Activity</p>
-    //         </div>
-    //         :
-    //         <p className="">🚧 Under Construction 🚧</p>
-    //         }
-    //     </div>
-    //     <div className="flex">
-    //         {activity3 ?
-    //         <div className="flex flex-col items-center">
-    //             <img src="https://cdn.onlinewebfonts.com/svg/img_227011.png" alt="" className="object-cover w-[100px] h-[100px]"/>
-    //             <p>Activity</p>
-    //         </div>
-    //         :
-    //         <p className="">🚧 Under Construction 🚧</p>
-    //         }
-    //     </div>
-      
-    // </div>
-    <p className="text-lg font-thin">🚧 Activities Under Construction 🚧</p>
+
+    <div key={itinerary_id} className="flex flex-wrap justify-center w-full gap-2 px-4
+        ">        
+        
+        {activities?.map(each =>
+
+        <div key={each._id} className="flex justify-center">
+            {/* <div className="flex flex-col w-[14rem] h-[14rem] bg-cover bg-center rounded-2xl" */}
+            <div className="flex flex-col justify-between items-center w-[13rem] h-[25vh] bg-center bg-no-repeat shadow-2xl bg-cover rounded-md
+                "
+                style={{backgroundImage:`url(${each.photo})`}}>
+                {/* <p className="text-lg font-bold text-center italic">{each.name} </p> */}
+                <p className="bg-slate-300 opacity-80 text-black px-2 rounded-md">{each.name} </p>
+            </div>
+        </div>
+            )
+        }
+        
+    </div>    
 
   );
 }

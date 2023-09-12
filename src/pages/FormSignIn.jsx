@@ -104,7 +104,7 @@ export default function Form() {
                     />
                     <input
                         type="button"
-                        className="bg-[#5c3481] text-white w-full py-4 font-semibold text-center cursor-pointer rounded-md mt-12 mb-4"
+                        className="bg-[#5c3481] text-white w-4/5 py-4 font-semibold text-center cursor-pointer rounded-md mt-12 mb-4"
                         value="Sign in"
                         onClick={handlerSignIn}
                     />

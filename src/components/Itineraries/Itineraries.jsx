@@ -30,7 +30,7 @@ export default function Itineraries( {show}) {
     
     console.log(itineraries_redux);
     return (
-        <div className="flex flex-col gap-8 bg-gray-300 w-[100%]">
+        <div className="flex flex-col gap-8 bg-gray-300 w-full">
 
             
         {itineraries_redux.length > 0 ? 
@@ -53,7 +53,15 @@ export default function Itineraries( {show}) {
                             lg:w-[40vw]
                             hover:scale-110" />
                         </div>
-                        <UsersInteractions comments={each.comments} photo={each.city_id.admin_id.photo} userName={each.city_id.admin_id.name} tags={each.tags} duration={each.duration} price={each.price} />
+                        <UsersInteractions 
+                            comments={each.comments} 
+                            photo={each.city_id.admin_id.photo} 
+                            userName={each.city_id.admin_id.name} 
+                            tags={each.tags} 
+                            duration={each.duration} 
+                            price={each.price}
+                            itinerary_id={each._id}
+                            />
                         {/* Comments */}
                                                         
 
