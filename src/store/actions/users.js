@@ -7,14 +7,23 @@ const signup = createAsyncThunk(
     'signup',
     async(obj)=>{
         try {
+            console.log(obj.data);
             let data = await axios.post( apiUrl + "auth/register", obj.data )
+            console.log(data);
             return {
-                user: data.data.response.user,
-                token: data.data.response.token
+                user: data.data.response,
+                // token: data.data.response.token,
+                messages: []
             }            
         
         } catch (error) {
-            console.log(error);            
+            console.log(error);
+            return{
+                user: {},
+                token: '',
+                messages: error.response.data.messages || [error.response.data.message]
+            }
+
         }
     }
 )
@@ -29,13 +38,15 @@ const signin = createAsyncThunk(
             localStorage.setItem('token', data.data.response.token)
             return {
                 user: data.data.response.user,
-                token: data.data.response.token
+                token: data.data.response.token,
+                messages: []
             }
         } catch (error) {
-            console.log(error);
+            console.log(error.response.data.messages);
             return {
                 user: {},
-                token: ''
+                token: '',
+                messages: error.response.data.messages || [error.response.data.message]
             }
         }
     }

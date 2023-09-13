@@ -32,10 +32,25 @@ function signOut() {
             
                 {mail ?
                 <>
-                    <UserLogged style={''} name={user.name} photo={user.photo} onClick={signOut} />               
+                    <UserLogged 
+                        style={''} 
+                        name={user?.name} 
+                        photo={user?.photo}
+                        container={"w-full flex flex-col rounded-lg items-center p-2"} 
+                        onClick={signOut} 
+                    />               
                 </>
-                : 
+                :
+                <>
+                    <UserLogged 
+                            style={''} 
+                            name={user?.name} 
+                            photo={user?.photo}
+                            container={"hidden"} 
+                            onClick={signOut} 
+                        /> 
                     <LinkLogin style={'bg-[#4F46E5] rounded-lg py-2 px-4 hover:transition hover:ease-in-out hover:bg-[#756ff1]'} />
+                </>
                 }
 
             </nav>

@@ -6,10 +6,8 @@ import MainLayout from "./layouts/MainLayout";
 import CitiesLayout from "./layouts/CitiesLayout";
 import CityDetailsLayout from "./layouts/CityDetailsLayout";
 import CityDetailsPage from "./pages/CityDetailsPage";
-import FormCreateAccount from './components/FormCreateAccount';
-import FormSignUp from './pages/FormSignUp';
-import FormSignIn from './pages/FormSignIn';
-import LogOut from "./components/LogOut";
+import FormSignUp from './pages/FormSignUp' ;
+import FormSignIn from './pages/FormSignIn' ;
 
 const router = createBrowserRouter([
     {   
@@ -19,10 +17,8 @@ const router = createBrowserRouter([
             { path:"/", element:<Home />},
             { path:"/index", element:<Home />},
             { path:"/home", element:<Home />},
-            { path:"/auth", element:<FormSignUp/>}, // revisar rutas para el register
-            { path:"/auth/register", element:<FormCreateAccount/>},
+            { path:"/auth/register", element:<FormSignUp/>},
             { path:"/auth/login", element:<FormSignIn/>},
-            { path:"/auth/logout", element:<LogOut/>}
         ]
     },
     { 

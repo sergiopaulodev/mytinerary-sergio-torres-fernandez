@@ -6,7 +6,7 @@ export default function LogOutBtn( {style, onClick}) {
         <>
             <div className="flex gap-4">
                 <button className={style}>
-                    <Anchor to='/auth/logout' onClick={onClick} className="text-gray-800 font-semibold
+                    <Anchor to='/' onClick={onClick} className="text-gray-800 font-semibold
                     hover:text-red-600
                     hover:transition
                     hover:delay-100

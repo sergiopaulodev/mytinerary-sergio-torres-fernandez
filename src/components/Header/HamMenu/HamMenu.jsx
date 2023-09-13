@@ -53,16 +53,20 @@ export default function HamMenu( ) {
               {isChecked &&
 
                 <div className="flex flex-col justify-between gap-6 mt-8 items-end">
-                    <UserLogged name={user.name} photo={user.photo} />
-                    <LinkHome />
-                    <LinkCities/>
                     {mail_signin?
                     <>
-                    <LinkLogOut onClick={signOut} />
+                        <UserLogged name={user.name} photo={user.photo} />
+                        <LinkHome />
+                        <LinkCities/>
+                        <LinkLogOut onClick={signOut} />
                     </>
                     
                     :
-                    <LinkLogin style={'bg-[#4F46E5] rounded-lg py-2 px-4 hover:transition hover:ease-in-out hover:bg-[#756ff1]'}/>
+                    <>
+                        <LinkHome />
+                        <LinkCities/>
+                        <LinkLogin style={'bg-[#4F46E5] rounded-lg py-2 px-4 hover:transition hover:ease-in-out hover:bg-[#756ff1]'}/>
+                    </>
                     }
                     
                 </div>
