@@ -11,6 +11,9 @@ export default function UserLogged({ name, photo, onClick, container}) {
     function handlerShowHide() {
         setShow(!show)
     }
+    function reload() {
+        setShow(!show)
+    }
 
     
     return (
@@ -42,7 +45,7 @@ export default function UserLogged({ name, photo, onClick, container}) {
                         </li>
 
                         <li>
-                            <LogOutBtn onClick={onClick} /> 
+                            <LogOutBtn onClick={onClick} reload={reload} /> 
                         </li>
 
                     </ul>
