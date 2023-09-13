@@ -4,7 +4,7 @@ import { Link as Anchor } from 'react-router-dom';
 export default function FooterLogin( {style}) {
   return (
     <>
-        <Anchor to="/auth" className={style}>
+        <Anchor to="/auth/login" className={style}>
             Login
         </Anchor>
     </>

@@ -1,12 +1,12 @@
 
 import { Link as Anchor } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
-export default function LogOutBtn( {style, onClick}) {
+export default function LogOutBtn( {style, onClick, reload}) {
     return (
         <>
-            <div className="flex gap-4">
+            <div className="flex gap-4" onClick={reload}>
                 <button className={style}>
-                    <Anchor to='/' onClick={onClick} className="text-gray-800 font-semibold
+                    <Anchor to='/' onClick={onClick} oncl className="text-gray-800 font-semibold
                     hover:text-red-600
                     hover:transition
                     hover:delay-100
