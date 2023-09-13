@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CityDetails from "../components/CityDetails";
 import Header from "../components/Header/Header";
-import Itineraries from "../components/Itineraries";
+import Itineraries from "../components/Itineraries/Itineraries";
 import { useDispatch, useSelector } from "react-redux";
 import cities_actions from "../store/actions/cities";
 

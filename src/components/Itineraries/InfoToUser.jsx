@@ -2,9 +2,9 @@
 export default function InfoToUser({ photo ,userName, tags, duration, price }) {
   return (
     <>
-      <div className="flex flex-col items-start w-[90vw] mb-4 gap-6
+      <div className="flex flex-wrap items-center justify-between w-[90vw] mb-4 gap-6
         md:w-[70vw]
-        md:justify-between
+        // md:justify-between
         md:flex-row
         md:gap-2
         lg:w-[50vw]
@@ -19,19 +19,16 @@ export default function InfoToUser({ photo ,userName, tags, duration, price }) {
                     hover:border-[#4F46E5]" />
                 <p className="text-center text-slate-400">{userName}</p> 
             </div>
-            <div className="flex flex-col justify-between items-start
-                md:items-center">
+            <div className="flex flex-col justify-between items-center">
 
                 <p className="text-center text-[#1C1C1C]">Hashtags</p>
                 <p className="text-slate-400">{tags}</p> 
             </div>
             <div className="flex flex-col justify-between items-center">
                 <p className="text-center text-[#1C1C1C]">Duration</p>
-                <p className="text-slate-400">{duration} min</p> 
+                <p className="text-slate-400">{duration}</p> 
             </div>
-            <div className="flex flex-col justify-between items-start
-                md:items-center
-                ">
+            <div className="flex flex-col justify-between items-center">
 
                 <p className="text-center text-[#1C1C1C]">Price</p>
                 

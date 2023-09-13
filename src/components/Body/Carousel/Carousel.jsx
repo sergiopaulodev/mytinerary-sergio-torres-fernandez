@@ -90,7 +90,7 @@ function previousMobile() {
     md:hidden 
     lg:w-2/3">
         <h1 className="text-3xl font-extralight uppercase text-[#1C1C1C]">Popular Mytineraries</h1>
-        <div className="flex flex-nowrap items-center justify-center gap-2 drop-shadow-xl
+        <div className="flex flex-nowrap w-full items-center justify-center gap-2 drop-shadow-xl
         lg:justify-between ">
             <Arrow direction="M15.75 19.5L8.25 12l7.5-7.5" 
             className="inline-flex" onClick={previousMobile} />

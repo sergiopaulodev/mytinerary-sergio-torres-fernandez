@@ -1,5 +1,6 @@
 
-import src from '../../public/noneItineraries.png'
+// import src from '../../public/noneItineraries.png'
+import src from '../../../public/noneItineraries.png'
 export default function NoneIntineraries() {
   return (
     <>
