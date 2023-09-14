@@ -36,7 +36,7 @@ export default function Form2() {
       dispatch(signup({data}))
         .then(res =>{
             console.log(res);
-            if (res.payload.token ) {
+            if (res.payload.user._id ) {
                 Swal.fire({
                     icon: 'success',
                     title: 'You have been register',
