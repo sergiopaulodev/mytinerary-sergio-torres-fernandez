@@ -11,9 +11,6 @@ export default function UserLogged({ name, photo, onClick, container}) {
     function handlerShowHide() {
         setShow(!show)
     }
-    function reload() {
-        setShow(!show)
-    }
 
     
     return (
@@ -29,7 +26,7 @@ export default function UserLogged({ name, photo, onClick, container}) {
                      <span className='w-[40px]'></span>
                      :
                     <>
-                    <ul className='hidden flex-col gap-4 items-center
+                    <ul className='hidden flex-col gap-4 items-center 
                         md:flex
                         '>
                        <li>
@@ -45,7 +42,7 @@ export default function UserLogged({ name, photo, onClick, container}) {
                         </li>
 
                         <li>
-                            <LogOutBtn onClick={onClick} reload={reload} /> 
+                            <LogOutBtn onClick={onClick} reload={handlerShowHide} /> 
                         </li>
 
                     </ul>

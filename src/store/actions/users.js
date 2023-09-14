@@ -12,7 +12,7 @@ const signup = createAsyncThunk(
             console.log(data);
             return {
                 user: data.data.response,
-                // token: data.data.response.token,
+                token: '',
                 messages: []
             }            
         
